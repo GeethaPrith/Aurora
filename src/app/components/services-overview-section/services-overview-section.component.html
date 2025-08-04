@@ -1,0 +1,280 @@
+<div class="services-overview container">
+  <div class="text-center mb-3">
+    <div class="heading-wrapper">
+      <h3 class="section-title">
+        <mark>Explore Our Services</mark>
+      </h3>
+      <p class="section-desc">
+        We help you grow at every stage of your digital journey. Leading digital solutions provider in Coimbatore,
+        specializing in crafting responsive websites, high-performance web applications, and complete digital marketing
+        strategies that help your business grow online. Click any service below to learn more:
+      </p>
+    </div>
+  </div>
+
+  <!-- Service block with list + carousel -->
+  <div class="service-block row align-items-start gy-4">
+    <!-- Left: Website Design & Development -->
+    <div class="service-card">
+      <h3 class="service-title"><strong>Website Design &amp; Development</strong></h3>
+      <p class="service-sub">We craft websites that combine design, functionality, and SEO.</p>
+      <ul class="service-list">
+        <li><a href="#">Website Design</a> – Stunning designs tailored to your goals.</li>
+        <li><a href="#">AIT Starter Websites</a> – Affordable static websites for small businesses.</li>
+        <li><a href="#">AIT Dynamic Websites</a> – Dynamic sites with user-friendly CMS.</li>
+        <li><a href="#">Brand Player Websites</a> – Advanced sites for strong online branding.</li>
+        <li><a href="#">Startup Store</a> – Budget-friendly e-commerce setup for startups.</li>
+        <li><a href="#">Ecommerce Websites</a> – Fully functional online stores with secure payments.</li>
+      </ul>
+    </div>
+
+    <!-- Right: Slider / Gallery -->
+    <div class="slider-wrapper">
+      <!-- Placeholder for Swiper/your carousel -->
+      <div class="swiper-container my-swiper">
+        <div class="swiper-wrapper">
+          <!-- Repeat this slide block dynamically -->
+          <div class="swiper-slide" *ngFor="let slide of slides">
+            <div class="slide-inner">
+              <a [href]="slide.href" class="zoom">
+                <div class="image">
+                  <img [alt]="slide.alt" loading="lazy" decoding="async" [src]="slide.src" />
+                  <span class="zoom-icon"></span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="services-overview container ">
+      <!-- Block Header (if needed separately, else omit) -->
+      <div class="service-block">
+        <!-- Left: Graphic Design Services -->
+        <div class="service-card">
+          <h3 class="service-title"><strong>Graphic Design Services</strong></h3>
+          <p class="service-sub">
+            Our <a href="https:auroraitech.com/services/graphic-design/" target="_blank" rel="noopener">
+              Graphic Design
+            </a> solutions help you build a strong visual identity.
+          </p>
+          <ul class="service-list">
+            <li>
+              <a href="https:auroraitech.com/services/graphic-design/logo-designing/" target="_blank" rel="noopener">
+                Logo Designing
+              </a> – Professional logos that reflect your brand story.
+            </li>
+            <li>
+              <a href="https:auroraitech.com/services/graphic-design/brochure-designing/" target="_blank"
+                rel="noopener">
+                Brochure Designing
+              </a> – Eye-catching brochures to showcase your products and services.
+            </li>
+            <li>
+              <a href="https:auroraitech.com/services/graphic-design/business-collaterals/" target="_blank"
+                rel="noopener">
+                Business Collaterals
+              </a> – Letterheads, business cards, envelopes, and more for brand consistency.
+            </li>
+            <li>
+              <a href="https:auroraitech.com/services/graphic-design/social-media-designs/" target="_blank"
+                rel="noopener">
+                Social Media Designs
+              </a> – Engaging posts and creatives to grow your audience online.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right: Slider / Gallery -->
+        <div class="slider-wrapper">
+          <div class="swiper-container my-swiper">
+            <div class="swiper-wrapper">
+              <!-- Slide items (could be driven by *ngFor from component) -->
+              <div class="swiper-slide" *ngFor="let slide of graphicSlides">
+                <div class="slide-inner">
+                  <a [href]="slide.href" class="zoom" target="_blank" rel="noopener">
+                    <div class="image">
+                      <img [alt]="slide.alt" loading="lazy" decoding="async" [src]="slide.src" />
+                      <span class="zoom-icon"></span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="services-overview container ">
+      <div class="service-block">
+        <!-- Left: Mobile App & Web Development -->
+        <div class="service-card">
+          <h3 class="service-title"><strong>Mobile App &amp; Web Development</strong></h3>
+          <p class="service-sub">Reach your audience anywhere with robust apps.</p>
+          <ul class="service-list">
+            <li>
+              <a href="https:auroraitech.com/services/app-development/" target="_blank" rel="noopener">
+                App Development
+              </a> – End-to-end app development services.
+            </li>
+            <li>
+              <a href="https:auroraitech.com/services/app-development/web-development/" target="_blank"
+                rel="noopener">
+                Web Development
+              </a> – Custom web apps for all business needs.
+            </li>
+            <li>
+              <a href="https:auroraitech.com/services/app-development/android-app-development/" target="_blank"
+                rel="noopener">
+                Android App Development
+              </a> – Native Android applications for better reach.
+            </li>
+            <li>
+              <a href="https:auroraitech.com/services/app-development/ios-app-development/" target="_blank"
+                rel="noopener">
+                iOS App Development
+              </a> – iOS apps that deliver smooth user experiences.
+            </li>
+            <li>
+              <a href="https:auroraitech.com/services/app-development/hybrid-app-development/" target="_blank"
+                rel="noopener">
+                Hybrid App Development
+              </a> – Cost-effective, cross-platform apps.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right: Slider / Gallery -->
+        <div class="slider-wrapper">
+          <div class="swiper-container my-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" *ngFor="let slide of appWebSlides">
+                <div class="slide-inner">
+                  <a [href]="slide.href" class="zoom" target="_blank" rel="noopener">
+                    <div class="image">
+                      <img [alt]="slide.alt" loading="lazy" decoding="async" [src]="slide.src" />
+                      <span class="zoom-icon"></span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="services-overview container ">
+      <div class="service-block">
+        <!-- Left: Digital Marketing -->
+        <div class="service-card">
+          <h3 class="service-title"><strong>Digital Marketing</strong></h3>
+          <p class="service-sub">Grow your traffic and reach with our targeted marketing services.</p>
+          <ul class="service-list">
+            <li>
+              <a href="https:auroraitech.com/services/digital-marketing/" target="_blank" rel="noopener">
+                Digital Marketing
+              </a> – Complete strategy to boost your online presence.
+            </li>
+            <li>
+              <a href="https:auroraitech.com/services/digital-marketing/social-media-promotions/" target="_blank"
+                rel="noopener">
+                Social Media Promotions
+              </a> – Drive engagement and followers on Facebook, Instagram, LinkedIn, and more.
+            </li>
+            <li>
+              <a href="https:auroraitech.com/services/digital-marketing/local-business-listing/" target="_blank"
+                rel="noopener">
+                Local Business Listing
+              </a> – Rank higher locally on Google Maps and searches.
+            </li>
+            <li>
+              <a href="https:auroraitech.com/services/digital-marketing/search-engine-promotions/" target="_blank"
+                rel="noopener">
+                Search Engine Promotions
+              </a> – Improve your Google rankings with on-page and off-page SEO.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right: Slider / Gallery -->
+        <div class="slider-wrapper">
+          <div class="swiper-container my-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" *ngFor="let slide of marketingSlides">
+                <div class="slide-inner">
+                  <a [href]="slide.href" class="zoom" target="_blank" rel="noopener">
+                    <div class="image">
+                      <img [alt]="slide.alt" loading="lazy" decoding="async" [src]="slide.src" />
+                      <span class="zoom-icon"></span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="services-overview container ">
+      <div class="service-block">
+        <!-- Left: Multimedia Services -->
+        <div class="service-card">
+          <h3 class="service-title"><strong>Multimedia Services</strong></h3>
+          <p class="service-sub">Bring your brand to life with professional visuals.</p>
+          <ul class="service-list">
+            <li>
+              <a href="https:auroraitech.com/services/multimedia/" target="_blank" rel="noopener">
+                Multimedia
+              </a>
+            </li>
+            <li>
+              <a href="https:auroraitech.com/services/multimedia/product-photography/" target="_blank" rel="noopener">
+                Product Photography
+              </a> – High-quality images for catalogues, ads, and e-commerce.
+            </li>
+            <li>
+              <a href="https:auroraitech.com/services/multimedia/corporate-videos/" target="_blank" rel="noopener">
+                Corporate Videos
+              </a> – Showcase your business story.
+            </li>
+            <li>
+              <a href="https:auroraitech.com/services/multimedia/promotional-videos/" target="_blank" rel="noopener">
+                Promotional Videos
+              </a> – Attention-grabbing marketing videos.
+            </li>
+            <li>
+              <a href="https:auroraitech.com/services/multimedia/explainer-videos/" target="_blank" rel="noopener">
+                Explainer Videos
+              </a> – Simplify complex ideas with animation.
+            </li>
+            <li>
+              <a href="https:auroraitech.com/services/multimedia/industrial-photography/" target="_blank"
+                rel="noopener">
+                Industrial Photography
+              </a> – Capture industrial sites and processes.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right: Slider / Gallery -->
+        <div class="slider-wrapper">
+          <div class="swiper-container my-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" *ngFor="let slide of multimediaSlides">
+                <div class="slide-inner">
+                  <a [href]="slide.href" class="zoom" target="_blank" rel="noopener">
+                    <div class="image">
+                      <img [alt]="slide.alt" loading="lazy" decoding="async" [src]="slide.src" />
+                      <span class="zoom-icon"></span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

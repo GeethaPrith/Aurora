@@ -1,0 +1,104 @@
+@use '../../../styles/variables' as *;
+
+.site-footer {
+  background: $bg-color;
+  color: $text-color;
+  font-size: $fs-md;
+  margin-top: auto;
+
+  a {
+    color: $link-color;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  .footer-top {
+    background: $bg-color;
+
+    .footer-col {
+      h3 {
+        font-size: $fs-2xl;
+        margin-bottom: 0.75rem;
+        color: $primary-color;
+      }
+
+      address {
+        font-style: normal;
+        line-height: $lh-normal;
+        margin-bottom: 0.5rem;
+        color: $text-color;
+      }
+
+      .footer-logo img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 0.75rem;
+      }
+
+      ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        li {
+          margin-bottom: 0.35rem;
+        }
+      }
+
+      .brand-img {
+        max-width: 120px;
+        height: auto;
+        display: block;
+      }
+    }
+
+    .address {
+      // optional spacing tweak for larger screens
+      @media (min-width: 992px) {
+        padding-right: 1.5rem;
+      }
+    }
+  }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+    .social-icons {
+      display: flex;
+      gap: 0.75rem;
+
+      a {
+        color: $social-icons;
+        font-size: $fs-md;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+/* Responsive tweaks if needed */
+@media (max-width: 767.98px) {
+  .site-footer {
+    .footer-top {
+      .footer-col {
+        h3 {
+          font-size: 1.1rem;
+        }
+      }
+    }
+
+    .footer-bottom {
+      .social-icons {
+        margin-top: 0.5rem;
+      }
+    }
+  }
+}
+

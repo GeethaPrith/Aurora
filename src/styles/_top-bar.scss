@@ -1,0 +1,169 @@
+ @use '../styles/variables' as *;
+ @use '../styles/layout' as *;
+ @use '../styles/mixins' as *;
+
+
+//  .top-bar {
+//      background: #fff;
+//      border-bottom: 1px solid #e5e5e5;
+//      padding: $padding-y 0;
+
+//      .top-header {
+//          @extend .flex-between;
+//          flex-wrap: wrap;
+//          gap: 1rem;
+
+//          .logo img {
+//              max-height: $logo-max-height;
+//          }
+
+//          .top-info {
+//              @extend .flex-between;
+//              flex-grow: 1;
+//              align-items: center;
+
+//              .contact-swiper {
+//                  max-width: $swiper-max-width;
+//                  width: 100%;
+
+//                  .swiper-slide {
+//                      display: flex;
+//                      align-items: center;
+//                      justify-content: flex-start;
+//                      padding-right: $slide-spacing;
+
+//                      &::after {
+//                          content: '';
+//                          position: absolute;
+//                          right: -20px;
+//                          top: 10%;
+//                          height: 80%;
+//                          width: 1px;
+//                          background-color: #ccc;
+//                      }
+
+//                      &:last-child::after {
+//                          display: none;
+//                      }
+//                  }
+//              }
+
+//          }
+
+//          .info-item {
+//              display: flex;
+//              align-items: center;
+
+//              .info-icon {
+//                  font-size: $fs-28;
+//                  color: $primary-color;
+//                  margin-right: 0.75rem;
+//              }
+
+//              .info-content {
+//                  .info-title {
+//                      font-weight: $font-weight-semibold;
+//                      color: $primary-color;
+//                      white-space: nowrap;
+//                  }
+
+//                  .info-sub-title {
+//                      font-size: $fs-sm;
+//                      color: black;
+//                  }
+//              }
+//          }
+//      }
+
+//      .social-icons {
+//          @extend .flex-center;
+//          gap: 0.75rem;
+//          font-size: $fs-xl;
+//          color: $text-color;
+
+//          i {
+//              cursor: pointer;
+//              transition: color 0.3s;
+
+//              &:hover {
+//                  color: $hover-color;
+//              }
+//          }
+//      }
+//      // Media Queries
+//  @media (max-width: 991.98px) {  Tablets and below
+//    .top-bar {
+//      .top-header {
+//        flex-direction: column;
+//        align-items: flex-start;
+
+//        .top-info {
+//          flex-direction: column;
+//          align-items: flex-start;
+//          gap: 1rem;
+//        }
+
+//        .contact-swiper {
+//          max-width: 100%;
+
+//          .swiper-slide {
+//            padding-right: 1rem;
+
+//            &::after {
+//              right: 0;
+//            }
+//          }
+//        }
+
+//        .info-item {
+//          width: 100%;
+//          justify-content: flex-start;
+//        }
+//      }
+
+//      .social-icons {
+//        justify-content: flex-start;
+//        margin-top: 0.75rem;
+//      }
+//    }
+//  }
+
+//  @media (max-width: 575.98px) {  Mobile
+//    .top-bar {
+//      padding: 0.5rem 0;
+
+//      .top-header {
+//        gap: 0.5rem;
+
+//        .logo img {
+//          max-height: 40px;
+//        }
+
+//        .info-item {
+//          flex-direction: column;
+//          align-items: flex-start;
+
+//          .info-icon {
+//            margin-right: 0;
+//            margin-bottom: 0.25rem;
+//          }
+//        }
+
+//        .contact-swiper {
+//          .swiper-slide {
+//            flex-direction: column;
+//            align-items: flex-start;
+
+//            &::after {
+//              display: none;
+//            }
+//          }
+//        }
+//      }
+
+//      .social-icons {
+//        font-size: $fs-md;
+//      }
+//    }
+//  }
+//  }

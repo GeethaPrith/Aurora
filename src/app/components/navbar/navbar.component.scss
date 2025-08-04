@@ -1,0 +1,279 @@
+@use '../../../styles/variables' as *;
+
+.top-bar {
+    background: $white-color;
+    border-bottom: 1px solid $border-color;
+    padding-top: $padding-y;
+    padding-bottom: $padding-y;
+
+    .info-item {
+        .info-icon {
+            font-size: $fs-28;
+            color: $primary-color;
+            margin-right: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .info-title {
+            font-weight: $font-weight-semibold;
+            color: $primary-color;
+            white-space: nowrap;
+        }
+
+        .info-sub-title {
+            font-size: $fs-sm;
+            color: $black-color;
+        }
+    }
+
+    .social-icons {
+        font-size: $fs-xl;
+        color: $text-color;
+
+        i {
+            cursor: pointer;
+            transition: color $transition;
+
+            &:hover {
+                color: $hover-color;
+            }
+        }
+    }
+
+    .contact-swiper {
+        max-width: $swiper-max-width;
+        width: 100%;
+
+        .swiper-slide {
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding-right: $slide-spacing;
+
+            &::after {
+                content: '';
+                position: absolute;
+                right: -20px;
+                top: 10%;
+                height: 80%;
+                width: 1px;
+                background-color: #ccc;
+            }
+
+            &:last-child::after {
+                display: none;
+            }
+        }
+    }
+}
+
+.navbar {
+    position: sticky !important;
+    top: 0;
+    z-index: 1050;
+    background-color: $white-color;
+    border-bottom: 1px solid $border-color;
+    overflow: visible;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+
+    .navbar-nav {
+        display: flex;
+        align-items: center;
+
+        .nav-link {
+            position: relative;
+            color: $text-color;
+            font-weight: $font-weight-regular;
+            font-size: $fs-md;
+            padding: $padding-y $padding-y;
+            transition: color 0.3s ease;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: $underline-height;
+                width: 0;
+                background-color: $primary-color;
+                transition: width 0.3s ease;
+            }
+
+            &:hover,
+            &.active {
+                color: $primary-color;
+
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+
+        .dropdown {
+            position: relative;
+
+            &:hover .dropdown-menu {
+                display: block;
+            }
+
+            .dropdown-menu {
+                position: absolute;
+                top: calc(100% + 8px);
+                left: 0;
+                display: none;
+                padding: 0.5rem 0;
+                background-color: $white-color;
+                border: 1px solid $border-color;
+                border-radius: 0.25rem;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                min-width: 12rem;
+                z-index: 1050;
+            }
+        }
+
+        .dropdown-toggle::after {
+            display: none !important;
+        }
+
+        i {
+            font-size: 0.65rem;
+            margin-left: 0.25rem;
+            color: $text-color;
+        }
+
+        .nav-item.dropdown:hover i {
+            transform: rotate(180deg);
+            transition: transform 0.3s ease;
+        }
+    }
+
+    .separator {
+        width: 1px;
+        height: 56px;
+        background-color: $border-color;
+        display: inline-block;
+        margin: 0 2rem;
+    }
+
+    form {
+        display: flex;
+        align-items: center;
+
+        .form-control,
+        .btn {
+            border: none;
+            box-shadow: none;
+            outline: none;
+        }
+
+        .form-control {
+            border-radius: 0;
+            font-size: $fs-md;
+
+            &::placeholder {
+                transition: opacity 0.3s ease;
+            }
+
+            &:focus::placeholder {
+                opacity: 0;
+            }
+        }
+
+        .btn {
+            background-color: transparent;
+            color: $link-color;
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .top-bar {
+        display: none;
+
+        .contact-swiper {
+            display: none;
+        }
+
+        .social-icons {
+            display: none;
+        }
+
+        .logo {
+            display: none;
+        }
+    }
+
+    .navbar {
+        .brand {
+            width: 50px;
+            height: 50px;
+        }
+
+        .navbar-nav {
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        form {
+            width: 100%;
+            margin-top: 0.5rem;
+        }
+
+        .separator {
+            display: none;
+        }
+    }
+}
+
+/* target mid screens specifically */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .top-bar .row {
+        flex-wrap: nowrap;
+        /* prevent wrapping into multiple lines */
+        overflow: hidden;
+    }
+
+    .top-bar .col-md,
+    .top-bar .col-md-auto {
+        min-width: 0;
+        /* essential so flex children can shrink instead of overflowing */
+    }
+
+    .top-bar {
+        .logo {
+            flex: 0 0 auto;
+            /* don’t grow too big */
+            margin-right: 1rem;
+        }
+
+        .contact-swiper {
+            flex: 1 1 0;
+            /* allow it to shrink/grow to fill available space */
+            min-width: 0;
+            /* important so it can shrink inside flex */
+            overflow: hidden;
+            /* avoid pushing others */
+
+            .swiper-slide {
+                padding-right: 0.5rem;
+                /* reduce spacing to save width */
+            }
+        }
+
+        .social-icons {
+            flex: 0 0 auto;
+            // margin-left: 1rem;
+            display: flex;
+            gap: 0.5rem;
+            white-space: nowrap;
+
+        }
+    }
+}

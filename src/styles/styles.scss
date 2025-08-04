@@ -1,0 +1,15 @@
+   @use '../styles/variables';
+   @use '../styles/mixins';
+
+
+ html ,body {
+       font-family: ceribrisans;
+       height: 100%;
+         margin: 0;
+
+   }
+
+
+.main-content {
+  flex: 1; 
+}

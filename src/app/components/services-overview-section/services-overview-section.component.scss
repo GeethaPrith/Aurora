@@ -1,0 +1,142 @@
+@use '../../../styles/variables' as *;
+
+.services-overview {
+
+  .heading-wrapper {
+    margin: 0 auto;
+
+    .section-title {
+      font-size: $fs-5xl;
+      font-weight: $font-weight-bold;
+      margin-bottom: 0.75rem;
+
+      mark {
+        background-color: transparent;
+        color: $primary-color;
+        padding: 0 6px;
+        border-radius: 3px;
+      }
+    }
+
+    .section-desc {
+      font-size: $fs-lg;
+      color: $text-color2;
+      line-height: $lh-comfortable;
+      text-align: center;
+    }
+  }
+
+  .section-desc,
+  .service-sub,
+  .service-card p,
+  .service-list li {
+    line-height: $lh-extra-loose; // more breathing room between lines
+  }
+
+  .service-block {
+    margin-top: 2rem;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+
+    .service-card,
+    .slider-wrapper {
+      flex: 1 1 320px;
+      min-width: 300px;
+    }
+
+    .service-card {
+      h3.service-title {
+        font-size: $fs-3xl;
+        margin-bottom: 0.5rem;
+        color: $primary-color;
+      }
+
+      .service-sub {
+        font-size: $fs-lg;
+        margin-bottom: 1rem;
+        color: $text-color2;
+      }
+
+      .service-list {
+        list-style: disc;
+        padding-left: 1.25rem;
+
+        li {
+          margin-bottom: 0.6rem;
+          font-size: $fs-lg;
+
+          a {
+            font-weight: $font-weight-semibold;
+            text-decoration: none;
+            color: $link-color;
+
+            &:hover {
+              color: $primary-color;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+
+    .slider-wrapper {
+      position: relative;
+      overflow: hidden; // contain slides
+
+      .swiper-container {
+        width: 100%;
+        max-width: 700px; // adjust as needed
+        margin: 0 auto;
+      }
+
+      .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .image {
+          position: relative;
+          width: 100%;
+          aspect-ratio: 16 / 9;
+          overflow: hidden;
+          border-radius: 8px;
+
+          img {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover; // crops / fills nicely
+            display: block;
+          }
+
+          .zoom-icon {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            width: 24px;
+            height: 24px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+
+  }
+
+  @media (max-width: 992px) {
+    .heading-wrapper {
+      .section-title {
+        font-size: 2rem;
+      }
+    }
+
+    .service-block {
+
+      .service-card,
+      .slider-wrapper {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+}
