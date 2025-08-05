@@ -81,8 +81,8 @@
 
     .navbar-nav {
         display: flex;
-        align-items: center;
-
+flex-wrap: nowrap;
+align-items: center;
         .nav-link {
             position: relative;
             color: $text-color;

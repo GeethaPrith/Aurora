@@ -1,7 +1,7 @@
 @use '../../../styles/variables' as *;
 
 .section {
-    padding: 3rem 0; // reduced inter-section space
+    padding: 3rem 0;
 
     .heading-wrapper {
         margin-bottom: 1rem;
@@ -20,7 +20,7 @@
     }
 
     .service-sub {
-        margin-top: 1rem; // space between title and subtitle if subtitle is separate element
+        margin-top: 1rem;
         margin-bottom: 1rem;
         color: ($primary-color, 30%); // or keep #444 if preferred
         font-size: $fs-md;
@@ -38,8 +38,8 @@
         transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
             box-shadow 0.3s ease;
         padding-right: 1rem;
-        justify-content: center; // vertical centering
-        height: 100%; // allow it to stretch to container
+        justify-content: center;
+        height: 100%;
 
         h2,
         h3 {
@@ -106,22 +106,17 @@
 }
 
 .blogs-section {
+
     .heading-wrapper {
-        margin-bottom: 2rem; // space between title and blog cards
+        margin-bottom: 2rem;
 
         .section-title {
             margin-bottom: 0.5rem;
-            font-size: $fs-5xl;
-
-            mark {
-                background-color: transparent; // remove background
-                color: $primary-color; // use primary color for text
-                padding: 0; // remove extra padding if any
-            }
+            font-size: $fs-xxl;
         }
 
         .section-subtitle {
-            color: $primary-color; // make subtitle text primary color
+            color: $primary-color;
             font-size: $fs-xl;
             font-weight: $font-weight-medium;
             margin-top: 0.5rem;
@@ -132,11 +127,10 @@
         display: grid;
         gap: 1.5rem;
         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        margin-top: 1.5rem; // ensures spacing from the heading
-
+        margin-top: 1.5rem;
 
         .blog-card {
-            background: #fff;
+            background: $white-color;
             border-radius: 12px;
             overflow: hidden;
             display: flex;
@@ -171,7 +165,7 @@
 
                 .post-title {
                     margin: 0 0 8px;
-                    font-size: $fs-4xl;
+                    font-size: $fs-2xl;
 
                     a {
                         color: $primary-color;
@@ -180,8 +174,8 @@
                 }
 
                 .post-excerpt {
-                    font-size: $fs-sm;
-                   line-height:  $lh-relaxed;
+                    font-size: $fs-15;
+                    line-height: $lh-relaxed;
                     margin-bottom: 12px;
                 }
 
@@ -226,7 +220,7 @@
 
 .clients-section {
     .section-title {
-        font-size: $fs-5xl;
+        font-size: $fs-xxl;
         color: $primary-color;
     }
 
@@ -257,7 +251,7 @@
 .faqs-section {
     .section-title {
         color: $primary-color;
-        font-size: $fs-5xl;
+        font-size: $fs-xxl;
     }
 
     .faq-list {
@@ -281,7 +275,7 @@
 
             .faq-answer {
                 margin-top: 0.5rem;
-                font-size: $fs-sm;
+                font-size: $fs-15;
                 line-height: $lh-relaxed;
                 color: $text-color;
             }

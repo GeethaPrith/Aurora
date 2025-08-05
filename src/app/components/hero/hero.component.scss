@@ -42,15 +42,10 @@
     }
 
     .heading {
-      font-size: clamp($font-size-heading-min, 5vw, $font-size-heading-max);
-      font-weight: $font-weight-regular;
+      font-size: $fs-xxl ;
+      font-weight: $font-weight-bold;
       margin-bottom: 20px;
-      line-height: $lh-snug;
-
-      mark {
-        background-color: transparent;
-        color: $primary-color;
-      }
+      line-height: $lh-relaxed;
     }
 
     .btn {

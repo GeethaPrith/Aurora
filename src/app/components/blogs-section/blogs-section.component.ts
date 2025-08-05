@@ -1,37 +1,16 @@
-import { CommonModule, NgFor } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { AfterViewInit, Component } from '@angular/core';
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 
 @Component({
   selector: 'app-blogs-section',
-  imports: [NgFor, CommonModule],
+  imports: [ CommonModule],
   templateUrl: './blogs-section.component.html',
   styleUrl: './blogs-section.component.scss'
 })
 export class BlogsSectionComponent implements AfterViewInit {
-  // clients = [
-  //   {
-  //     name: 'Aurora iTech',
-  //     logo: 'https://auroraitech.com/wp-content/uploads/2022/09/SPINaqm.png',
-  //     alt: 'Aurora iTech',
-  //     href: '#'
-  //   },
-  //   {
-  //     name: 'Greenfos',
-  //     logo: 'https://auroraitech.com/wp-content/uploads/2021/01/greenfos-logo.png',
-  //     alt: 'greenfos-logo',
-  //     href: '#'
-  //   },
-  //   {
-  //     name: 'Suijin',
-  //     logo: 'https://auroraitech.com/wp-content/uploads/2021/01/suijin.png',
-  //     alt: 'suijin',
-  //     href: '#'
-  //   },
-  // ];
-  // in your component class
-  blogPosts = [
+ blogPosts = [
     {
       title: 'Ultimate WordPress SEO Guide: Boost Your Rankings with Aurora ITECH',
       url: 'https://auroraitech.com/ultimate-wordpress-seo-guide-boost-your-rankings-with-aurora-itech/',
@@ -142,13 +121,11 @@ export class BlogsSectionComponent implements AfterViewInit {
 
   brochureLink = 'https://heyzine.com/flip-book/a9978e2775.html';
 
-
-
   ngAfterViewInit(): void {
     setTimeout(() => {
     new Swiper('.clients-swiper', {
       slidesPerView: 6,
-      slidesPerGroup: 1,          // move one slide at a time
+      slidesPerGroup: 1,          
       loop: true,
       speed: 2000,
       direction: 'horizontal',

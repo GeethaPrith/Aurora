@@ -6,12 +6,30 @@
         <h2 class="service-title"><strong>Our Portfolios</strong></h2>
         <p class="service-sub">See how we deliver real results across industries:</p>
         <ul class="service-list">
-          <li><h4><a href="https:auroraitech.com/portfolios/branding-solutions/" target="_blank" rel="noopener">Branding Solutions</a></h4></li>
-          <li><h4><a href="https:auroraitech.com/portfolios/web-design/" target="_blank" rel="noopener">Web Design Projects</a></h4></li>
-          <li><h4><a href="https:auroraitech.com/portfolios/app-development/" target="_blank" rel="noopener">App Development Projects</a></h4></li>
-          <li><h4><a href="https:auroraitech.com/portfolios/digital-marketing/" target="_blank" rel="noopener">Digital Marketing Projects</a></h4></li>
-          <li><h4><a href="https:auroraitech.com/portfolios/multimedia/" target="_blank" rel="noopener">Multimedia Projects</a></h4></li>
-          <li><h4><a href="https:auroraitech.com/portfolios/it-solutions/" target="_blank" rel="noopener">IT Solutions Projects</a></h4></li>
+          <li>
+            <h4><a href="https:auroraitech.com/portfolios/branding-solutions/" target="_blank" rel="noopener">Branding
+                Solutions</a></h4>
+          </li>
+          <li>
+            <h4><a href="https:auroraitech.com/portfolios/web-design/" target="_blank" rel="noopener">Web Design
+                Projects</a></h4>
+          </li>
+          <li>
+            <h4><a href="https:auroraitech.com/portfolios/app-development/" target="_blank" rel="noopener">App
+                Development Projects</a></h4>
+          </li>
+          <li>
+            <h4><a href="https:auroraitech.com/portfolios/digital-marketing/" target="_blank" rel="noopener">Digital
+                Marketing Projects</a></h4>
+          </li>
+          <li>
+            <h4><a href="https:auroraitech.com/portfolios/multimedia/" target="_blank" rel="noopener">Multimedia
+                Projects</a></h4>
+          </li>
+          <li>
+            <h4><a href="https:auroraitech.com/portfolios/it-solutions/" target="_blank" rel="noopener">IT Solutions
+                Projects</a></h4>
+          </li>
         </ul>
         <div class="blockquote">
           <div class="quote-text">Just click and see our Works, Deliver Excellence in Every Projects</div>
@@ -21,12 +39,8 @@
       <!-- Right: Image -->
       <div class="slider-wrapper">
         <div class="image-card">
-          <img
-            loading="lazy"
-            decoding="async"
-            alt="AURORA - Portfolios"
-            src="https:auroraitech.com/wp-content/uploads/2025/07/AURORA-Portfolios-scaled.jpg"
-          />
+          <img loading="lazy" decoding="async" alt="AURORA - Portfolios"
+            src="/assets/portfolio/AURORA-Portfolios-scaled.jpg" />
         </div>
       </div>
     </div>
@@ -40,8 +54,8 @@
     </div>
 
     <div class="blog-grid">
-      <!-- Repeat this block via *ngFor from component data -->
-      <div class="blog-card" *ngFor="let post of blogPosts">
+      @for (post of blogPosts; track post.title) {
+      <div class="blog-card">
         <div class="post-feature">
           <a [href]="post.url">
             <img [src]="post.thumbnail" [alt]="post.title" loading="lazy" decoding="async" />
@@ -66,8 +80,7 @@
           </div>
         </div>
       </div>
-
-      <!-- View More -->
+      }
       <div class="view-more-wrapper text-center">
         <a class="btn" href="https:auroraitech.com/blog/">View More</a>
       </div>
@@ -84,16 +97,19 @@
     <div class="slider-wrapper">
       <div class="swiper-container clients-swiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide" *ngFor="let client of clientsList">
+          @for(client of clientsList; track client.name){
+          <div class="swiper-slide">
             <div class="client-logo">
               <img [src]="client.logo" [alt]="client.name" loading="lazy" decoding="async" />
             </div>
           </div>
+          }
         </div>
       </div>
     </div>
   </div>
 </section>
+
 <section class="section faqs-section">
   <div class="container">
     <div class="heading-wrapper text-center">
@@ -101,10 +117,12 @@
     </div>
 
     <div class="faq-list">
-      <details *ngFor="let faq of faqs" class="faq-item">
-        <summary class="faq-question">{{ faq.question }}</summary>
-        <p class="faq-answer">{{ faq.answer }}</p>
-      </details>
+      @for (faq of faqs; track faq.question) {
+        <details class="faq-item">
+          <summary class="faq-question">{{ faq.question }}</summary>
+          <p class="faq-answer">{{ faq.answer }}</p>
+        </details>
+      }
     </div>
 
     <div class="brochure-section row align-items-center mt-4">
@@ -120,3 +138,5 @@
     </div>
   </div>
 </section>
+
+

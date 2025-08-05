@@ -10,14 +10,10 @@
     margin-bottom: 40px;
 
     h1 {
-      font-size: $fs-32;
+      font-size: $fs-xxl;
       font-weight: $font-weight-bold;
 
-      mark {
-        background: none;
-        color: $primary-color;
-      }
-    }
+ }
   }
 
   h4 {
@@ -175,13 +171,7 @@
     line-height: $lh-normal;
     word-wrap: break-word;
     letter-spacing: $letter-spacing-mainheading;
-
-    mark {
-      background: transparent;
-      color: $primary-color;
-      font-weight: bold;
     }
-  }
 
   .tabs {
     display: flex;

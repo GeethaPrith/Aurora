@@ -6,16 +6,9 @@
     margin: 0 auto;
 
     .section-title {
-      font-size: $fs-5xl;
+      font-size: $fs-xxl;
       font-weight: $font-weight-bold;
       margin-bottom: 0.75rem;
-
-      mark {
-        background-color: transparent;
-        color: $primary-color;
-        padding: 0 6px;
-        border-radius: 3px;
-      }
     }
 
     .section-desc {

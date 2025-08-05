@@ -1,15 +1,33 @@
-   @use '../styles/variables';
-   @use '../styles/mixins';
+   @use '../styles/variables' as *;
+   @use '../styles/mixins' as *;
 
 
- html ,body {
-       font-family: ceribrisans;
-       height: 100%;
-         margin: 0;
-
+   html,
+   body {
+     font-family: 'ceribrisans', sans-serif;
+     height: 100%;
+     margin: 0;
+     font-size: $fs-15;
+     line-height: $lh-174 ;
+     letter-spacing: 0.02em;
    }
 
 
-.main-content {
-  flex: 1; 
-}
+   .main-content {
+     flex: 1;
+   }
+
+   .subtitle {
+     font-size: $fs-lg;
+     font-weight: $font-weight-medium;
+     margin-bottom: 1rem;
+     color: $primary-color;
+   }
+
+   mark {
+     background: none;
+     color: $primary-color;
+     padding: 0 6px;
+     font-weight: $font-weight-bold;
+     border-radius: 4px;
+   }
