@@ -22,13 +22,10 @@
     .service-sub {
         margin-top: 1rem;
         margin-bottom: 1rem;
-        color: ($primary-color, 30%); // or keep #444 if preferred
-        font-size: $fs-md;
-        line-height: $lh-relaxed;
     }
 
-    .service-title {
-        color: $primary-color;
+    .heading {
+        font-weight: $font-weight-bold;
     }
 
     .service-card {
@@ -50,12 +47,13 @@
         .service-list {
             li {
                 margin-bottom: 0.75rem;
-                line-height: $lh-comfortable;
+                font-size: $fs-2xl;
             }
 
             a {
                 color: $link-color;
                 text-decoration: none;
+
 
                 &:hover {
                     color: $white-color;
@@ -110,16 +108,8 @@
     .heading-wrapper {
         margin-bottom: 2rem;
 
-        .section-title {
+        .heading {
             margin-bottom: 0.5rem;
-            font-size: $fs-xxl;
-        }
-
-        .section-subtitle {
-            color: $primary-color;
-            font-size: $fs-xl;
-            font-weight: $font-weight-medium;
-            margin-top: 0.5rem;
         }
     }
 
@@ -219,11 +209,6 @@
 }
 
 .clients-section {
-    .section-title {
-        font-size: $fs-xxl;
-        color: $primary-color;
-    }
-
     .slider-wrapper {
         margin-top: 4rem;
 
@@ -237,22 +222,22 @@
                 .client-logo img {
                     max-width: 100px;
                     object-fit: contain;
-                    transition: transform 0.4s ease;
+                    filter: grayscale(100%) brightness(1.4) opacity(0.6);
+                    transition: transform 0.3s ease, filter 0.3s ease;
+
+                    &:hover {
+                        transform: scale(1.1);
+                        filter: grayscale(0%);
+                    }
+
                 }
 
-                &:hover .client-logo img {
-                    transform: scale(1.05);
-                }
             }
         }
     }
 }
 
 .faqs-section {
-    .section-title {
-        color: $primary-color;
-        font-size: $fs-xxl;
-    }
 
     .faq-list {
         margin-top: 2rem;
@@ -262,12 +247,8 @@
             padding: 1rem 0;
             transition: background-color $transition;
 
-            &:hover {
-                background-color: rgba($primary-color, 0.03);
-            }
-
             .faq-question {
-                font-weight: $font-weight-semibold;
+                font-weight: $font-weight-bold;
                 cursor: pointer;
                 color: $primary-color;
                 font-size: $fs-lg;
@@ -275,9 +256,8 @@
 
             .faq-answer {
                 margin-top: 0.5rem;
-                font-size: $fs-15;
-                line-height: $lh-relaxed;
                 color: $text-color;
+                font-weight: $font-weight-bold;
             }
         }
     }
@@ -286,13 +266,14 @@
         margin-top: 3rem;
 
         .heading {
-            color: $primary-color;
+            font-size: $fs-2xl;
         }
 
         .btn {
             font-weight: $font-weight-semibold;
             padding: 10px 20px;
             background-color: $primary-color;
+            border: none;
         }
     }
 }

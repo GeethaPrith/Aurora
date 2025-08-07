@@ -79,7 +79,6 @@
             <span>Let's talk</span>
           </a>
         </div>
-
       </div>
     </div>
   </section>
@@ -87,12 +86,34 @@
 </section>
 <section class="tech-section">
   <h6 class="sub-heading">Discover our company</h6>
-  <h1 class="main-heading"><mark>We’ve been thriving with 75+ IT Technologies</mark></h1>
-
+  <h1 class="heading"><mark>We’ve been thriving with 75+ IT Technologies</mark></h1>
   <ul class="tabs">
-    <li class="tab active">GRAPHIC DESIGN</li>
-    <li class="tab">WEB TECHNOLOGIES</li>
-    <li class="tab">MOBILE TECHNOLOGIES</li>
-    <li class="tab">SERVER TECHNOLOGIES</li>
+    @for (tab of tabs; track tab.key) {
+    <li class="tab" [class.active]="activeTab === tab.key" (click)="selectTab(tab.key)">
+      {{ tab.label }}
+    </li>
+    }
   </ul>
+
+  <div class="tech-swiper-row">
+    @for (tab of tabs; track tab.key) {
+    @if (activeTab === tab.key) {
+    <div class="swiper tech-swiper" [ngClass]="'tech-swiper-' + tab.key">
+      <div class="swiper-wrapper">
+        @for (img of tab.images; track img.src) {
+        <div class="swiper-slide">
+          <img [src]="img.src" [alt]="img.alt" />
+        </div>
+        }
+      </div>
+    </div>
+    }
+    }
+  </div>
+  <div class="pagination-dots">
+    @for (img of activeImages; let i = $index; track img.src) {
+    <span class="dot" [class.active]="i === activeIndex" (click)="setActive(i)">
+    </span>
+    }
+  </div>
 </section>

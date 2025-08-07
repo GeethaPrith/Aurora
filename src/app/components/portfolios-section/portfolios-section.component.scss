@@ -2,6 +2,7 @@
 
 .services-tabs {
     background: $white-color;
+    margin-top: 40px;
 
     .services-slider {
         display: flex;
@@ -25,11 +26,17 @@
                 text-align: left;
 
                 .title {
-                    font-size: $fs-2xl;
+                    font-size: $fs-48;
                     font-weight: $font-weight-bold;
                     margin-bottom: 0.5rem;
                     color: $primary-color;
                 }
+
+                .subtitle {
+                    font-size: $fs-2xl;
+                    font-weight: $font-weight-bold;
+                }
+
                 .description {
                     font-size: $fs-md;
                     line-height: $lh-relaxed;
@@ -83,12 +90,12 @@
         margin: 80px 80px;
 
         .highlight-text {
-            max-width: 500px; // ✅ force two-line layout
+            max-width: 500px;
             width: 100%;
         }
 
         h1 {
-            font-size: $fs-xxl;
+            font-size: $fs-34;
             font-weight: $font-weight-bold;
             margin: 0;
             line-height: $lh-mid;
@@ -106,7 +113,7 @@
 
         .btn-link {
             display: inline-block;
-            background: $primary-color; // e.g., #e91e63
+            background: $primary-color;
             color: $white-color;
             padding: 12px 24px;
             border-radius: 8px;
@@ -125,7 +132,6 @@
         }
     }
 
-
     .rating-contact-row {
         position: relative;
         left: 50%;
@@ -139,30 +145,30 @@
         flex-wrap: wrap;
         gap: 40px;
         background-color: $rating-bg-color;
-        background-image: url(https://auroraitech.com/wp-content/uploads/2019/03/mitech-home-services-contact-bg.png);
+        background-image: url('/assets/portfolio/mitech-home-services-contact-bg.png');
         background-repeat: no-repeat;
         background-position: left-bottom;
         color: $white-color;
-        min-height: 600px;
+        min-height: 700px;
 
         .rating-box {
             flex: 1;
             text-align: center;
 
             h3 {
-                font-size: $fs-40;
+                font-size: $fs-34;
                 margin-bottom: 10px;
                 color: $white-color;
             }
 
             .stars {
-                font-size: $fs-28;
+                font-size: $fs-2xl;
                 color: gold;
                 margin-bottom: 10px;
             }
 
             p {
-                font-size: $fs-xl;
+                font-size: $fs-lg;
                 margin-bottom: 24px;
             }
 
@@ -209,11 +215,25 @@
                 margin-bottom: 24px;
                 color: $primary-color;
             }
+                .description {
+                    font-size: 1rem;
+                    color:$text-color; 
+                    margin-bottom: 1.5rem;
+                    text-align: center;
+                }
 
             form {
                 display: flex;
                 flex-direction: column;
                 gap: 16px;
+
+                .form-title {
+                    font-size: $fs-40;
+                    margin-bottom: 10px;
+                    font-weight: $font-weight-bold;
+                    line-height: $lh-143;
+                }
+
 
                 .form-group {
 
@@ -222,7 +242,9 @@
                     textarea {
                         width: 100%;
                         padding: 12px 16px;
-                        border: 1px solid #ccc;
+                        background-color: $form-background;
+                        border: $form-background;
+                        color: $social-icons;
                         border-radius: 6px;
                         font-size: $fs-md;
                         font-family: inherit;
@@ -242,7 +264,6 @@
                     background-color: $primary-color;
                     color: $white-color;
                     border: none;
-                    border-radius: 50px;
                     transition: background 0.3s;
 
                     &:hover {
@@ -257,18 +278,19 @@
 
 .why-choose-us-section {
     .heading {
-        font-size: $fs-xxl;
         font-weight: $font-weight-bold;
         margin-bottom: 1rem;
-        line-height: $lh-normal;
+        line-height: $lh-14;
+        word-wrap: break-word;
     }
-h4{
-    color: $primary-color;
-}
+
+    h4 {
+        color: $primary-color;
+        font-size: $fs-2xl;
+    }
+
     p {
-        font-size: $fs-lg;
         color: $text-color;
-        line-height: $lh-relaxed;
         margin-bottom: 1rem;
     }
 
@@ -278,7 +300,6 @@ h4{
 
         li {
             margin-bottom: 0.5rem;
-            font-size: $fs-lg;
             color: $text-color;
         }
     }

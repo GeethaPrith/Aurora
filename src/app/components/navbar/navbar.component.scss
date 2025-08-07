@@ -78,11 +78,11 @@
     overflow: visible;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 
-
     .navbar-nav {
         display: flex;
-flex-wrap: nowrap;
-align-items: center;
+        flex-wrap: nowrap;
+        align-items: center;
+
         .nav-link {
             position: relative;
             color: $text-color;
@@ -90,6 +90,7 @@ align-items: center;
             font-size: $fs-md;
             padding: $padding-y $padding-y;
             transition: color 0.3s ease;
+            line-height: 1.18;
 
             &::after {
                 content: '';

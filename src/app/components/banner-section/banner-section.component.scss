@@ -31,6 +31,7 @@
     opacity: 0;
     transform: translateY(80px);
     animation: slideUp $animation-slideup-duration ease forwards;
+    font: 400 16px 'Lato', sans-serif !important;
 
     .subheading {
       text-transform: uppercase;
@@ -41,7 +42,7 @@
       color: $sub-heading;
     }
 
-    .heading {
+    .section-title {
       font-size: $fs-xxl ;
       font-weight: $font-weight-bold;
       margin-bottom: 20px;

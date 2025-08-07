@@ -6,16 +6,12 @@
     margin: 0 auto;
 
     .section-title {
-      font-size: $fs-xxl;
-      font-weight: $font-weight-bold;
+      font-size: $fs-34;
       margin-bottom: 0.75rem;
     }
 
-    .section-desc {
-      font-size: $fs-lg;
-      color: $text-color2;
-      line-height: $lh-comfortable;
-      text-align: center;
+    .description {
+      text-align: left;
     }
   }
 
@@ -23,7 +19,7 @@
   .service-sub,
   .service-card p,
   .service-list li {
-    line-height: $lh-extra-loose; // more breathing room between lines
+    line-height: $lh-extra-loose; 
   }
 
   .service-block {
@@ -40,15 +36,13 @@
 
     .service-card {
       h3.service-title {
-        font-size: $fs-3xl;
+        font-size: $fs-36;
         margin-bottom: 0.5rem;
         color: $primary-color;
       }
 
       .service-sub {
-        font-size: $fs-lg;
         margin-bottom: 1rem;
-        color: $text-color2;
       }
 
       .service-list {
@@ -57,13 +51,10 @@
 
         li {
           margin-bottom: 0.6rem;
-          font-size: $fs-lg;
 
           a {
-            font-weight: $font-weight-semibold;
             text-decoration: none;
             color: $link-color;
-
             &:hover {
               color: $primary-color;
               text-decoration: underline;
@@ -75,11 +66,11 @@
 
     .slider-wrapper {
       position: relative;
-      overflow: hidden; // contain slides
+      overflow: hidden; 
 
       .swiper-container {
         width: 100%;
-        max-width: 700px; // adjust as needed
+        max-width: 700px; 
         margin: 0 auto;
       }
 
@@ -98,7 +89,7 @@
           img {
             max-width: 100%;
             height: auto;
-            object-fit: cover; // crops / fills nicely
+            object-fit: cover; 
             display: block;
           }
 

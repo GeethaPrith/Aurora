@@ -1,17 +1,16 @@
    @use '../styles/variables' as *;
    @use '../styles/mixins' as *;
 
-
    html,
    body {
-     font-family: 'ceribrisans', sans-serif;
+     font-family: $secondary-font;
      height: 100%;
      margin: 0;
      font-size: $fs-15;
      line-height: $lh-174 ;
      letter-spacing: 0.02em;
+     font-weight: $font-weight-regular;
    }
-
 
    .main-content {
      flex: 1;
@@ -30,4 +29,34 @@
      padding: 0 6px;
      font-weight: $font-weight-bold;
      border-radius: 4px;
+   }
+
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   h6,
+   th {
+     font-family: $secondary-font;
+     font-weight: $font-weight-bold;
+     letter-spacing: 0em;
+     line-height: $lh-142;
+   }
+
+   .heading {
+     font-size: $fs-40;
+     color: $primary-color;
+   }
+
+   @media(max-width:992px) {
+     .heading {
+       font-size: $fs-28;
+     }
+   }
+
+   @media(max-width:1199px) {
+     .heading {
+       font-size: $fs-34;
+     }
    }
