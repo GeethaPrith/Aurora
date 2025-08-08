@@ -110,10 +110,4 @@
     }
     }
   </div>
-  <div class="pagination-dots">
-    @for (img of activeImages; let i = $index; track img.src) {
-    <span class="dot" [class.active]="i === activeIndex" (click)="setActive(i)">
-    </span>
-    }
-  </div>
 </section>

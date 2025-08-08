@@ -59,80 +59,40 @@ export class ServicesSectionComponent implements AfterViewInit {
   get activeImages() {
     return this.tabs.find(tab => tab.key === this.activeTab)?.images ?? [];
   }
-
-  ngOnInit(): void {
-    this.startAutoplay();
-  }
+  selectTab(key: string): void {
+     this.activeTab = key;
+     this.activeIndex = 0;
+   }
 
   ngAfterViewInit(): void {
     setTimeout(() => {
-      this.initSwiper();
-    }, 0);
-  }
-
-  ngOnDestroy(): void {
-    this.stopAutoplay();
-    if (this.swiper) {
-      this.swiper.destroy(true, true);
-    }
-  }
-
-  selectTab(key: string): void {
-    this.activeTab = key;
-    this.activeIndex = 0;
-    this.stopAutoplay();
-    setTimeout(() => this.initSwiper(), 0);
-    this.startAutoplay();
-  }
-
-  setActive(index: number): void {
-    this.activeIndex = index;
-    this.swiper?.slideTo(index);
-  }
-
-  private initSwiper(): void {
-    const selector = `.tech-swiper-${this.activeTab}`;
-    const el = document.querySelector(selector) as HTMLElement;
-
-    if (el) {
-      if (this.swiper) {
-        this.swiper.destroy(true, true);
-      }
-
-      this.swiper = new Swiper(el, {
-        slidesPerView: 4,
-        spaceBetween: 10,
-        speed: 600,
-        loop: true,
-        grabCursor: true,
-        centeredSlides: true,
-        breakpoints: {
-          992: { slidesPerView: 5 },
-          576: { slidesPerView: 2 },
-          0: { slidesPerView: 1 },
-        },
-        on: {
-          slideChange: () => {
-            this.activeIndex = this.swiper?.realIndex ?? 0;
-          },
-        },
-      });
-
-      this.swiper.slideToLoop(this.activeIndex);
-    }
-  }
-
-  private startAutoplay(): void {
-    this.intervalId = setInterval(() => {
-      this.activeIndex = (this.activeIndex + 1) % this.tabs.find(tab => tab.key === this.activeTab)!.images.length;
-      this.swiper?.slideToLoop(this.activeIndex);
-    }, 4000);
-  }
-
-  private stopAutoplay(): void {
-    if (this.intervalId) {
-      clearInterval(this.intervalId);
-      this.intervalId = null;
-    }
+    new Swiper('.tech-swiper', {
+      slidesPerView: 6,
+      slidesPerGroup: 1,          
+      loop: true,
+      speed: 2000,
+      direction: 'horizontal',
+      spaceBetween: 30,
+      autoplay: {
+        delay: 10,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      freeMode: true,
+      grabCursor: true,
+      breakpoints: {
+        0: { slidesPerView: 1, slidesPerGroup: 1 },
+        576: { slidesPerView: 2, slidesPerGroup: 1 },
+        768: { slidesPerView: 3, slidesPerGroup: 1 },
+        992: { slidesPerView: 4, slidesPerGroup: 1 },
+        1200: { slidesPerView: 5, slidesPerGroup: 1 },
+        1400: { slidesPerView: 6, slidesPerGroup: 1 },
+      },
+    });
+    });
   }
 }
