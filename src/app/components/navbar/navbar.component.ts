@@ -70,26 +70,6 @@ export class NavbarComponent implements AfterViewInit {
       this.swiperInstance = null;
     }
   }
-
-  //      ngAfterViewInit(): void {
-  //    new Swiper('.contact-swiper', {
-  //      loop: true,
-  //      speed: 800,
-  //      autoplay: {
-  //        delay: 2000,
-  //        reverseDirection: false,
-  //        disableOnInteraction: false
-  //      },
-  //      slidesPerView: 3,
-  //      spaceBetween: 80,
-  //      slidesPerGroup: 1,
-  //      breakpoints: {
-  //        576: { slidesPerView: 1 },
-  //        768: { slidesPerView: 1 },
-  //        992: { slidesPerView: 3 }
-  //      }
-  //    });
-  //  }
 }
 
 

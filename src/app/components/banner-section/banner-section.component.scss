@@ -1,0 +1,123 @@
+@use '../../../styles/variables' as *;
+
+.hero-slider {
+  position: relative;
+  background: $hero-bg-color;
+  overflow: hidden;
+
+  .carousel-inner {
+    position: relative;
+    z-index: 1;
+  }
+
+  .carousel-fade .carousel-item {
+    transition: $transition
+  }
+
+  .slide-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gap-large;
+    max-width: $max-content-width;
+    margin: 0 auto;
+    padding: $section-padding;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .text-block {
+    flex: 1 1 400px;
+    color: $text-color;
+    opacity: 0;
+    transform: translateY(80px);
+    animation: slideUp $animation-slideup-duration ease forwards;
+    font: 400 16px 'Lato', sans-serif !important;
+
+    .subheading {
+      text-transform: uppercase;
+      font-weight: $font-weight-bold;
+      font-size: $fs-sm;
+      letter-spacing: $letter-spacing-subheading;
+      margin-bottom: $gap-small;
+      color: $sub-heading;
+    }
+
+    .section-title {
+      font-size: $fs-xxl ;
+      font-weight: $font-weight-bold;
+      margin-bottom: 20px;
+      line-height: $lh-relaxed;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: $btn-padding-y $btn-padding-x;
+      background-color: $primary-color;
+      color: $white-color;
+      border-radius: $btn-radius;
+      text-decoration: none;
+      transition: background-color $transition;
+
+      &:hover {
+        background-color: $primary-light-10;
+      }
+    }
+  }
+
+  .images {
+    flex: 1 1 400px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .image-wrapper {
+      position: relative;
+      opacity: 0;
+      transform: translateY(80px);
+      animation: slideUp $animation-slideup-duration ease forwards;
+      animation-delay: $animation-slideup-delay;
+
+      .globe-bg,
+      .globe {
+        position: absolute;
+        right: -40px;
+        width: 600px;
+        height: 600px;
+        opacity: 0.4;
+        z-index: 0;
+        animation: rotate $animation-rotate-duration linear infinite;
+        object-fit: cover;
+      }
+
+      .overlay {
+        position: relative;
+        z-index: 1;
+        max-width: 500px;
+        display: block;
+      }
+    }
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(80px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

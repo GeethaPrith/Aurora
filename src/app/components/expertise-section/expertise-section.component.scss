@@ -2,33 +2,29 @@
 
 
 .company-intro {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
   background-color: $white-color;
-
+  padding-bottom: 100px !important;
+  padding-top: 100px !important;
+box-sizing: border-box;
   .content {
     .sub-heading {
       text-transform: uppercase;
       font-weight: $font-weight-bold;
       font-size: $fs-sm;
       letter-spacing: $letter-spacing-subheading;
-      margin-bottom: $gap-small;
+      margin-bottom: 22px;
       color: $sub-heading;
+      line-height:$lh-143 ;
+      font-family: $primary-font;
     }
 
     h1,
-    .display-6 {
+    .heading {
       font-weight: $font-weight-bold;
-      line-height: $lh-snug;
+      line-height: $lh-15;
       margin-bottom: 1rem;
-
-      mark.highlight {
-        background-color: transparent;
-        color: $primary-color;
-        padding: 0;
-        font-weight: $font-weight-bold;
-        border-radius: 0;
-      }
+      word-wrap: break-word;
+      box-sizing: inherit;
     }
   }
 
@@ -49,7 +45,8 @@
         font-size: $fs-lg;
         font-weight: $font-weight-medium;
         padding: 1rem 1rem;
-        position: relative;
+        line-height:$lh-123 ;
+        // position: relative;
 
         &:not(.collapsed) {
           background-color: $orange-color;
@@ -59,9 +56,11 @@
 
       .accordion-body {
         padding: 1rem 1rem;
-        font-size: $fs-lg;
-       line-height:  $lh-relaxed;
+        font-size: $fs-15;
+        line-height: $lh-174;
         color: $text-color;
+        font-family: $secondary-font !important;
+        font-weight: $font-weight-regular;
       }
     }
   }
@@ -125,7 +124,7 @@
 
 .center-image {
   width: 360px;
-  height: 180px;
+  height: 200px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -155,11 +154,11 @@
 }
 
 .bottom-left {
-  bottom: 1%;
+  bottom: 0%;
   left: 2%;
 }
 
 .bottom-right {
-  bottom: 1%;
+  bottom: 0%;
   right: 2%;
 }

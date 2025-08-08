@@ -2,6 +2,7 @@
 
 .counters-section {
   background: $bg-color;
+  font-family: $primary-font;
 
   .icon {
     font-size: $fs-3xl;
@@ -24,9 +25,9 @@
   }
 
   .heading {
-    font-size: $fs-lg;
-    color: $primary-color;
-    font-weight: $font-weight-semibold;
+    font-size: $fs-md;
+    font-weight: $font-weight-medium;
+    line-height: $lh-15;
+    letter-spacing: $letter-spacing-mainheading;
   }
 }
-
