@@ -42,11 +42,16 @@
       color: $sub-heading;
     }
 
-    .section-title {
+    .heading {
       font-size: $fs-xxl ;
       font-weight: $font-weight-bold;
       margin-bottom: 20px;
       line-height: $lh-relaxed;
+      color: $black-color;
+      .mark{
+        background: transparent;
+        color: $primary-color;
+      }
     }
 
     .btn {
@@ -84,7 +89,6 @@
         right: -40px;
         width: 600px;
         height: 600px;
-        opacity: 0.4;
         z-index: 0;
         animation: rotate $animation-rotate-duration linear infinite;
         object-fit: cover;
